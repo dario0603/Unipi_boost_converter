@@ -18,8 +18,8 @@ Academic project developed for the **University of Pisa** focused on the design,
 * **Switching Frequency ($f_{\text{sw}}$):** 600 kHz
 * **Load Resistance Range ($R_o$):** $100\,\Omega$ to $1000\,\Omega$
 * **Operation Mode:** Continuous Conduction Mode (CCM)
-* **Output Voltage Ripple ($r$):** $\le 0.1\% \times V_{\text{out}}$ ($12\text{ mV}$)
-* **Target Efficiency ($\eta$):** $> 70\%$ (Achieved: $87.5\%$ to $94.3\%$)
+* **Output Voltage Ripple:** $< 0.1 \cdot V_{\text{out}} = 12\text{ mV}$
+* **Target Efficiency:** $>70$% (Achieved: $87.5$% to $94.3$%)
 
 ---
 
