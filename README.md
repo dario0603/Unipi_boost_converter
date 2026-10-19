@@ -15,11 +15,15 @@ Academic project developed for the **University of Pisa** focused on the design,
 
 * **Input Voltage ($V_{\text{in}}$):** 3.3 V
 * **Output Voltage ($V_{\text{out}}$):** 12.0 V
-* **Switching Frequency ($f_{\text{sw}}$):** 600 kHz
-* **Load Resistance Range ($R_o$):** $100\,\Omega$ to $1000\,\Omega$
+* **Reference Voltage ($V_{\text{ref}}$):** 3.3 V
+* **PWM Peak/Ramp Voltage:** 1.0 V
+* **Switching Frequency:** 600 kHz
+* **Load Resistance Range ($R_o$):** $100\Omega$ to $1000\Omega$
 * **Operation Mode:** Continuous Conduction Mode (CCM)
-* **Output Voltage Ripple:** $< 0.1 \cdot V_{\text{out}} = 12\text{ mV}$
-* **Target Efficiency:** $>70$% (Achieved: $87.5$% to $94.3$%)
+* **Output Voltage Ripple:** < 0.1 $\cdot V_{\text{out}} = 12\text{ mV}$
+* **Target Efficiency:** > 70% (Achieved: 87.5% to 94.3%)
+* **Steady-State DC Relative Error:** < 1%
+* **50 Hz Relative Error:** < 10%
 
 ---
 
@@ -27,8 +31,8 @@ Academic project developed for the **University of Pisa** focused on the design,
 
 The power stage was dimensioned in worst-case operating conditions to counteract component derating and parasitic effects:
 
-* **Inductor ($L_1$):** Coilcraft RFS1317-334KL ($330\,\mu\text{H}$, $\text{DCR} = 286\text{ m}\Omega$), guaranteeing CCM operation up to $7.2\text{ k}\Omega$ load.
-* **Capacitor ($C_1$):** Panasonic 100SXE18M ($18\,\mu\text{F}$, $\text{ESR} = 30\text{ m}\Omega$, $100\text{ V}$) to meet the output ripple constraint.
+* **Inductor ($L_1$):** Coilcraft RFS1317-334KL ($330\mu\text{H}$, $\text{ESR} = 286\text{ m}\Omega$), guaranteeing CCM operation up to $7.2\text{ k}\Omega$ load.
+* **Capacitor ($C_1$):** Panasonic 100SXE18M ($18\mu\text{F}$, $\text{ESR} = 30\text{ m}\Omega$, $100\text{ V}$) to meet the output ripple constraint.
 * **Transistor ($M_1$):** Infineon IRFH7921 N-Channel MOSFET ($V_{\text{DS,max}} = 30\text{ V}$, $R_{\text{DS(on)}} = 8.5\text{ m}\Omega$).
 * **Diode ($D_1$):** Infineon BAS3005A-02V Schottky Diode ($I_{\text{max}} = 500\text{ mA}$, $V_{\gamma} \approx 0.5\text{ V}$, $R_D = 267\text{ m}\Omega$).
 
@@ -40,7 +44,7 @@ The power stage was dimensioned in worst-case operating conditions to counteract
 
 ## Small-Signal Modeling & Control Loop Design
 
-To ensure closed-loop stability across full load variation, small-signal state-space averaging was applied to derive the control-to-output transfer function $G_{vd}(s)$, line-to-output $G_{vg}(s)$, and output impedance $Z_{\text{out}}(s)$.
+To ensure closed-loop stability across full load variation, Has been derived control-to-output transfer function $G_{vd}(s)$, line-to-output $G_{vg}(s)$, and output impedance $Z_{\text{out}}(s)$.
 
 Because the uncompensated loop $T_u(s)$ exhibits a negative phase margin ($\phi_{m} \in [-28.6^{\circ}, -2.95^{\circ}]$), an analog **Type-III Compensator** (2 zeros, 3 poles) was synthesized:
 
