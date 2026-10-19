@@ -52,7 +52,7 @@ $$G_c(s) = \frac{\left(1 + \frac{s}{2\pi \cdot 0.25}\right)\left(1 + \frac{s}{2\
 
 * **Phase Margin ($\phi_m$):** $26.9^{\circ}$ (worst-case) to $63.0^{\circ}$
 * **Gain Margin ($M_g$):** $3.2\text{ dB}$ (worst-case) to $23.2\text{ dB}$
-* **Steady-State Error ($\epsilon_r$):** $0\%$ DC error, $<10\%$ at $50\text{ Hz}$
+* **Steady-State Error ($\epsilon_r$):** $0\%$ DC error, <10% at 50Hz
 
 | Type-III Op-Amp Circuit Architecture | Open-Loop vs Compensated Bode Response |
 | :---: | :---: |
